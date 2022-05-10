@@ -1,12 +1,11 @@
-databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
 
 services:
   - type: web
     name: mysite
     env: ruby
+    region: oregon
+    plan: starter
+    numInstances: 1
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
@@ -16,3 +15,4 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
+
