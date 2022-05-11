@@ -4,6 +4,15 @@
       <h1 class="display-4">Hello world</h1>
       <%= Time.now %>
     </div>
+    <br/>
+    <div>
+      ENV['IS_PULL_REQUEST'] => <%= ENV['IS_PULL_REQUEST'].inspect %>
+    </div>
+    <br/>
+    <div>
+      <%= ENV.inspect %>
+    </div>
+    <br/>
   </div>
 </main>
 
